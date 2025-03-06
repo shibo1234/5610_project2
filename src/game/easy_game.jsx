@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import GameBoard from "../components/game_board.jsx";
 import "./game.css";
@@ -44,7 +44,6 @@ function NormalGame() {
 
                 <div className="board-wrapper">
                     <h2>AI Board</h2>
-                    {/* <GameBoard isPlayer={false} board={aiBoard} gameStarted={gameStarted} onAttack={handleAttack} playerTurn={playerTurn} /> */}
                     <GameBoard isPlayer={false} board={aiBoard} gameStarted={gameStarted} onAttack={(row, col) => handleAttack(row, col, true)} playerTurn={playerTurn} />
                 </div>
             </div>
