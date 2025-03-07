@@ -2,12 +2,11 @@ import React, { useContext } from "react";
 import "./board.css";
 import { GameContext } from "../game_context";
 
-function GameBoard({ isPlayer, board, onAttack }) {
+function GameBoard({ isPlayer, board, onAttack, resetGame }) {
 
     const { gameStarted, playerTurn } = useContext(GameContext); 
 
     const handleClick = (row, col) => {
-
         if (!isPlayer && playerTurn && gameStarted && board[row][col] !== "X" && board[row][col] !== "H") {
             onAttack(row, col);
         }
