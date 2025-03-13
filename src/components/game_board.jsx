@@ -22,7 +22,7 @@ function GameBoard({ isPlayer, board, onAttack, resetGame }) {
                     className={`cell 
                         ${cell === "X" ? "miss" : ""} 
                         ${cell === "H" ? "hit" : ""} 
-                        ${(cell === "S" && (isPlayer || gameStarted)) ? "ship" : ""}
+                        ${(isPlayer && cell === "S" && (isPlayer || gameStarted)) ? "ship" : ""}
                         ${!isPlayer ? "hover-effect" : ""}
                     `}
                     onClick={() => handleClick(rowIndex, colIndex)}
